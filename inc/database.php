@@ -254,11 +254,11 @@ function navbar() {
         }
       $s .= '</ul>
     </li>
-    <li class="nav-item"><a class="nav-link text-secondary" href="lichphathanh.php"><i class="fa-solid fa-calendar-days me-1"></i> Lịch Phát Hành</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Thành viên</a></li>
-    <li class="nav-item"><a class="nav-link" href="tintuc.php">Tin tức</a></li>
-    <li class="nav-item"><a class="nav-link" href="huongdan.php">Hướng dẫn cần biết</a></li>
-    <li class="nav-item"><a class="nav-link" href="about.php">Về Hikaru</a></li>
+    <li class="nav-item"><a class="nav-link" href="lichphathanh.php"><i class="fa-solid fa-calendar-days me-1"></i> Lịch phát hành</a></li>
+<li class="nav-item"><a class="nav-link" href="thanhvien.php">Thành viên</a></li>
+<li class="nav-item"><a class="nav-link" href="tintuc.php">Tin tức</a></li>
+<li class="nav-item"><a class="nav-link" href="huongdan.php">Hướng dẫn cần biết</a></li>
+<li class="nav-item"><a class="nav-link" href="about.php">Về Hikaru</a></li>
     </ul> 
         </div>
       </div>

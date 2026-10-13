@@ -19,7 +19,8 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
 
 <section class="container my-5">
     <div class="text-center mb-4">
-        <h2 class="fw-bold text-white"><i class="fa-solid fa-credit-card text-danger me-2"></i>Thanh Toán Đơn Hàng</h2>
+        <!-- ĐÃ THAY ĐỔI MÀU CHỮ THÀNH MÀU VÀNG (text-warning) -->
+        <h2 class="fw-bold text-warning"><i class="fa-solid fa-credit-card me-2"></i>Thanh Toán Đơn Hàng</h2>
         <p class="text-secondary small">Vui lòng kiểm tra lại thông tin và xác nhận đặt hàng</p>
     </div>
 
@@ -79,7 +80,7 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
                         </div>
                     </div>
 
-                    <!-- Phương thức thanh toán (Có COD và Chuyển khoản qua logo .jpg) -->
+                    <!-- Phương thức thanh toán -->
                     <div class="card manga-card p-4 bg-dark border-secondary">
                         <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-wallet text-danger me-2"></i>Phương Thức Thanh Toán</h5>
                         <hr class="border-secondary">
@@ -93,7 +94,7 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
                             <p class="text-secondary small ms-4 mb-0 mt-1">Thanh toán tiền mặt trực tiếp cho shipper khi nhận hàng.</p>
                         </div>
 
-                        <!-- Chuyển khoản ngân hàng qua logo .jpg -->
+                        <!-- Chuyển khoản ngân hàng -->
                         <div class="form-check p-3 rounded border border-secondary bg-black">
                             <input class="form-check-input mt-1 ms-1" type="radio" name="payment_method" id="bank" value="bank">
                             <label class="form-check-label text-white fw-semibold ms-2" for="bank">
