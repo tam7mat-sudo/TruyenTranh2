@@ -323,85 +323,146 @@ function jumbotron() {
 }
 
 function body() {
-    $s = '<div id="manga-list">';
-    
-    // Kiểm tra xem người dùng có đang bấm vào "Xem tất cả" của danh mục nào không
+    $s = '<div id="manga-list" class="container my-4">';
+
+    // Cấu hình Màu sắc & Style đặc trưng cho từng Danh mục (Theme)
+    $themes = [
+        1 => [ // Conan
+            'header_bg' => 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
+            'card_border' => '1px solid #2a5298',
+            'btn_style' => 'btn-primary',
+            'badge' => 'bg-info text-dark',
+            'icon' => '<i class="fa-solid fa-magnifying-glass text-warning me-2"></i>'
+        ],
+        2 => [ // Doraemon
+            'header_bg' => 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+            'card_border' => '1px solid #00c6ff',
+            'btn_style' => 'btn-info text-white',
+            'badge' => 'bg-warning text-dark',
+            'icon' => '<i class="fa-solid fa-robot text-warning me-2"></i>'
+        ],
+        3 => [ // Dragon Ball
+            'header_bg' => 'linear-gradient(135deg, #f857a6 0%, #ff5858 100%)',
+            'card_border' => '1px solid #ff5858',
+            'btn_style' => 'btn-warning text-dark fw-bold',
+            'badge' => 'bg-danger text-white',
+            'icon' => '<i class="fa-solid fa-dragon text-warning me-2"></i>'
+        ],
+        4 => [ // Naruto
+            'header_bg' => 'linear-gradient(135deg, #ff9900 0%, #ff5500 100%)',
+            'card_border' => '1px solid #ff9900',
+            'btn_style' => 'btn-warning text-dark',
+            'badge' => 'bg-dark text-warning border border-warning',
+            'icon' => '<i class="fa-solid fa-bolt text-warning me-2"></i>'
+        ],
+        5 => [ // Truyện Trinh Thám
+            'header_bg' => 'linear-gradient(135deg, #800000 0%, #b22222 100%)',
+            'card_border' => '2px solid #b22222',
+            'btn_style' => 'btn-danger',
+            'badge' => 'bg-white text-danger fw-bold',
+            'icon' => '<i class="fa-solid fa-user-secret text-white me-2"></i>'
+        ]
+    ];
+
+    // TH1: Ở TRANG CHỦ (Hiển thị tất cả danh mục, mỗi danh mục 4 tấm)
     if(!isset($_GET['id_category'])) {
-        // Ở trang chủ: Lấy danh sách tất cả các danh mục
-        $q = Database::query("SELECT * FROM categories ORDER BY id ASC");
-    } else {
-        // Khi đã bấm "Xem tất cả": Chỉ lấy đúng danh mục được chọn
-        $q = Database::query("SELECT * FROM categories WHERE id = ".intval($_GET['id_category']));
-    }
-
-    if ($q) {
+        // Lấy danh sách danh mục (Truyện Trinh Thám id=5 lên đầu)
+        $q = Database::query("SELECT * FROM categories ORDER BY (id = 5) DESC, id ASC");
+        
         while ($r = $q->fetch_array()) {
-            $categoryId = $r['id'];
-            $categoryName = $r['name'];
+            $catId = $r['id'];
+            $catName = htmlspecialchars($r['name']);
             
-            // LOGIC QUAN TRỌNG: 
-            // Nếu chưa bấm xem tất cả (!isset($_GET['id_category'])) thì dùng LIMIT 4 (chỉ hiện 4 tấm).
-            // Nếu đã bấm xem tất cả thì lấy toàn bộ (không giới hạn LIMIT).
-            if (!isset($_GET['id_category'])) {
-                $q1 = Database::query("SELECT * FROM products WHERE id_category = $categoryId LIMIT 4");
-            } else {
-                $q1 = Database::query("SELECT * FROM products WHERE id_category = $categoryId");
-            }
+            // Thiết lập theme
+            $theme = isset($themes[$catId]) ? $themes[$catId] : [
+                'header_bg' => '#212529',
+                'card_border' => '1px solid #444',
+                'btn_style' => 'btn-outline-danger',
+                'badge' => 'bg-danger text-white',
+                'icon' => '<i class="fa-solid fa-book me-2"></i>'
+            ];
 
-            if ($q1 && $q1->num_rows > 0) {
-                $s .= '
-                <section class="container my-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
-                        <h4 class="fw-bold mb-0 d-flex align-items-center" style="color: #4a7c59;">
-                            <i class="fa-solid fa-bookmark me-2"></i>
-                            '.$categoryName.'
-                        </h4>';
-                
-                // Hiển thị nút tương ứng tùy theo trang hiện tại
-                if(!isset($_GET['id_category'])) {
-                    $s .= '<a href="index.php?id_category='.$categoryId.'" class="btn btn-sm btn-outline-success rounded-pill">Xem tất cả <i class="fa-solid fa-chevron-right ms-1"></i></a>';
-                } else {
-                    $s .= '<a href="index.php" class="btn btn-sm btn-outline-secondary rounded-pill"><i class="fa-solid fa-arrow-left me-1"></i>Quay lại trang chủ</a>';
-                }
-
-                $s .= '</div>
+            $s .= '
+            <div class="card bg-dark border-secondary mb-5 rounded-4 overflow-hidden shadow-lg">
+                <div class="card-header p-3 d-flex justify-content-between align-items-center text-white" style="background: '.$theme['header_bg'].';">
+                    <h4 class="mb-0 fw-bold">'.$theme['icon'].$catName.'</h4>
+                    <a href="index.php?id_category='.$catId.'" class="btn btn-sm '.$theme['badge'].' rounded-pill px-3 shadow-sm">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+                <div class="card-body p-4 bg-dark">
                     <div class="row g-3">';
 
-                while ($r1 = $q1->fetch_array()) {
-                    $cartLink = !isset($_SESSION['user']) ? 'login.php' : '#';
-                    $classBtn = !isset($_SESSION['user']) ? 'btn-manga' : 'btn-manga ajax-add-cart';
-                    $dataAttr = !isset($_SESSION['user']) ? '' : 'data-id="'.$r1['id'].'"';
-
-                    $s .= '
-                    <div class="col-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card manga-card w-100 d-flex flex-column">
-                            <div class="position-relative overflow-hidden">
-                                <img src="accets/images/'.$r1['image'].'" class="card-img-top p-2" style="aspect-ratio: 3/4; object-fit: cover;" alt="'.$r1['name'].'" />
-                            </div>
-                            <div class="card-body d-flex flex-column p-3">
-                                <h6 class="card-title fw-bold text-dark mb-2 text-truncate">'.$r1['name'].'</h6>
-                                <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
-                                    <span class="text-danger fw-bold fs-5">'.number_format($r1['price']).' đ</span>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="'.$cartLink.'" '.$dataAttr.' class="btn '.$classBtn.' w-100 py-2 text-center d-block"><i class="fa-solid fa-cart-plus me-1"></i> ĐẶT MUA</a>
-                                </div>
+            $pQ = Database::query("SELECT * FROM products WHERE id_category = $catId ORDER BY id ASC LIMIT 4");
+            while ($p = $pQ->fetch_array()) {
+                $img = 'accets/images/' . $p['image'];
+                $s .= '
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 bg-black text-white rounded-3 overflow-hidden shadow-sm hover-top" style="'.$theme['card_border'].'">
+                        <img src="'.$img.'" class="card-img-top" style="height: 250px; object-fit: cover;" alt="'.$p['name'].'">
+                        <div class="card-body p-3 d-flex flex-column justify-content-between">
+                            <h6 class="card-title text-truncate fw-bold mb-2">'.$p['name'].'</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="text-danger fw-bold">'.number_format($p['price']).' đ</span>
+                                <button class="btn btn-sm '.$theme['btn_style'].' ajax-add-cart" data-id="'.$p['id'].'"><i class="fa-solid fa-cart-plus"></i></button>
                             </div>
                         </div>
-                    </div>';
-                }
-
-                $s .= '
                     </div>
-                </section>';
+                </div>';
             }
+
+            $s .= '
+                    </div>
+                </div>
+            </div>';
         }
+    } 
+    // TH2: KHI NGƯỜI DÙNG BẤM VÀO XEM CHI TIẾT DANH MỤC
+    else {
+        $catId = intval($_GET['id_category']);
+        $catQ = Database::query("SELECT * FROM categories WHERE id = $catId");
+        $catData = $catQ->fetch_array();
+        $catName = htmlspecialchars($catData['name']);
+
+        $theme = isset($themes[$catId]) ? $themes[$catId] : [
+            'header_bg' => '#212529',
+            'card_border' => '1px solid #444',
+            'btn_style' => 'btn-outline-danger',
+            'icon' => '<i class="fa-solid fa-bookmark me-2"></i>'
+        ];
+
+        // Banner đầu danh mục theo màu sắc riêng
+        $s .= '
+        <div class="p-4 mb-4 rounded-4 shadow-lg text-white text-center position-relative overflow-hidden" 
+             style="background: '.$theme['header_bg'].';">
+            <h2 class="fw-bold mb-1">'.$theme['icon'].' DANH MỤC: '.$catName.'</h2>
+            <p class="mb-0 opacity-90 small">Khám phá các tập truyện '.$catName.' hấp dẫn nhất tại Hikaru Shop</p>
+        </div>';
+
+        $s .= '<div class="row g-4">';
+        $pQ = Database::query("SELECT * FROM products WHERE id_category = $catId ORDER BY id ASC");
+        
+        while ($p = $pQ->fetch_array()) {
+            $img = 'accets/images/' . $p['image'];
+
+            $s .= '
+            <div class="col-6 col-md-3">
+                <div class="card h-100 bg-black text-white rounded-4 overflow-hidden shadow" style="'.$theme['card_border'].'">
+                    <img src="'.$img.'" class="card-img-top" style="height: 280px; object-fit: cover;" alt="'.$p['name'].'">
+                    <div class="card-body p-3 d-flex flex-column justify-content-between">
+                        <h6 class="card-title text-truncate fw-bold mb-2">'.$p['name'].'</h6>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span class="text-danger fw-bold fs-6">'.number_format($p['price']).' đ</span>
+                            <button class="btn btn-sm '.$theme['btn_style'].' ajax-add-cart" data-id="'.$p['id'].'"><i class="fa-solid fa-cart-plus me-1"></i>Mua</button>
+                        </div>
+                    </div>
+                </div>
+            </div>';
+        }
+        $s .= '</div>';
     }
-    
+
     $s .= '</div>';
     echo $s;
 }
-
 
 function cart() {
     $subtotal = 0;

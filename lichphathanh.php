@@ -40,7 +40,28 @@ navbar();
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Item 1 -->
+                    <!-- Item 1: Ngôn Tình mới ra mắt -->
+                    <tr>
+                        <td class="text-secondary fw-semibold">
+                            <span class="d-block text-white">05/10/2026</span>
+                            <small class="text-info">Thứ Hai</small>
+                        </td>
+                        <td>
+                            <img src="accets/images/t1.jpg" class="rounded shadow-sm" style="width: 45px; height: 60px; object-fit: cover;" alt="Ngôn Tình 1">
+                        </td>
+                        <td class="text-start">
+                            <h6 class="mb-1 text-white fw-bold">Nơi Nào Nắng Ấm - Ngôn Tình Hot</h6>
+                            <span class="badge bg-danger bg-opacity-20 text-danger border border-danger fw-normal">Sách Ngôn Tình</span>
+                        </td>
+                        <td><span class="badge bg-danger px-3 py-2 fs-6">01</span></td>
+                        <td class="text-danger fw-bold fs-6">35,000 đ</td>
+                        <td><span class="badge bg-success bg-opacity-20 text-success border border-success px-2 py-1">Đã Phát Hành</span></td>
+                        <td>
+                            <a href="index.php?id_category=5" class="btn btn-sm btn-outline-danger rounded-pill px-3"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 2 -->
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">10/10/2026</span>
@@ -61,7 +82,28 @@ navbar();
                         </td>
                     </tr>
 
-                    <!-- Item 2 -->
+                    <!-- Item 3: Ngôn Tình tập tiếp theo -->
+                    <tr>
+                        <td class="text-secondary fw-semibold">
+                            <span class="d-block text-white">12/10/2026</span>
+                            <small class="text-info">Thứ Hai</small>
+                        </td>
+                        <td>
+                            <img src="accets/images/t2.jpg" class="rounded shadow-sm" style="width: 45px; height: 60px; object-fit: cover;" alt="Ngôn Tình 2">
+                        </td>
+                        <td class="text-start">
+                            <h6 class="mb-1 text-white fw-bold">Gió Bắc Đã Về - Ngôn Tình Lãng Mạn</h6>
+                            <span class="badge bg-warning text-dark fw-bold">Bản Giới Hạn</span>
+                        </td>
+                        <td><span class="badge bg-danger px-3 py-2 fs-6">02</span></td>
+                        <td class="text-danger fw-bold fs-6">35,000 đ</td>
+                        <td><span class="badge bg-success bg-opacity-20 text-success border border-success px-2 py-1">Đã Phát Hành</span></td>
+                        <td>
+                            <a href="index.php?id_category=5" class="btn btn-sm btn-outline-danger rounded-pill px-3"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 4 -->
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">15/10/2026</span>
@@ -82,7 +124,28 @@ navbar();
                         </td>
                     </tr>
 
-                    <!-- Item 3 -->
+                    <!-- Item 5: Ngôn Tình Pre-Order -->
+                    <tr>
+                        <td class="text-secondary fw-semibold">
+                            <span class="d-block text-white">18/10/2026</span>
+                            <small class="text-warning">Chủ Nhật</small>
+                        </td>
+                        <td>
+                            <img src="accets/images/t3.jpg" class="rounded shadow-sm" style="width: 45px; height: 60px; object-fit: cover;" alt="Ngôn Tình 3">
+                        </td>
+                        <td class="text-start">
+                            <h6 class="mb-1 text-white fw-bold">Thành Quách Xiêu Vẹo - Ngôn Tình Cổ Trang</h6>
+                            <span class="badge bg-danger bg-opacity-20 text-danger border border-danger fw-normal">Trọn Bộ Boxset</span>
+                        </td>
+                        <td><span class="badge bg-danger px-3 py-2 fs-6">03</span></td>
+                        <td class="text-danger fw-bold fs-6">40,000 đ</td>
+                        <td><span class="badge bg-info bg-opacity-20 text-info border border-info px-2 py-1">Nhận Pre-order</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-danger rounded-pill px-3"><i class="fa-solid fa-fire me-1"></i>Pre-order</button>
+                        </td>
+                    </tr>
+
+                    <!-- Item 6 -->
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">20/10/2026</span>
@@ -103,7 +166,7 @@ navbar();
                         </td>
                     </tr>
 
-                    <!-- Item 4 -->
+                    <!-- Item 7 -->
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">25/10/2026</span>
