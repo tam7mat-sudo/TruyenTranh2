@@ -1,6 +1,10 @@
 <?php
 include 'inc/database.php';
 
+<<<<<<< HEAD
+=======
+// Xử lý đăng nhập PHẢI nằm trước mọi lệnh xuất HTML
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 if (isset($_POST['emailphone']) && isset($_POST['password'])) {
     $emailphone = trim($_POST['emailphone']);
     $password = $_POST['password'];

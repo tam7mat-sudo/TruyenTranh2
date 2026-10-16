@@ -6,6 +6,10 @@ navbar();
 
 <section class="container my-5">
     <div class="card manga-card border-secondary p-4 p-md-5 bg-dark text-white shadow-lg rounded-4">
+<<<<<<< HEAD
+=======
+        <!-- Tiêu đề chính -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="text-center mb-5">
             <h2 class="fw-bold text-white text-uppercase">
                 <i class="fa-solid fa-store text-danger me-2"></i>Giới Thiệu Về Hikaru Shop
@@ -14,6 +18,10 @@ navbar();
             <hr class="border-danger w-25 mx-auto opacity-100 mt-3">
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Đoạn mở đầu -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="mb-5">
             <p class="fs-5 leading-relaxed text-light">
                 Chào mừng bạn đến với <strong class="text-danger">Hikaru Shop</strong> – điểm đến lý tưởng và uy tín hàng đầu dành cho những tâm hồn đam mê Manga, Light Novel và văn hóa Anime/Comic tại Việt Nam!
@@ -21,6 +29,10 @@ navbar();
         </div>
 
         <div class="row g-4 mb-5">
+<<<<<<< HEAD
+=======
+            <!-- Về Chúng Tôi -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="col-md-6">
                 <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary h-100">
                     <h4 class="fw-bold text-danger mb-3">
@@ -32,6 +44,10 @@ navbar();
                 </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            <!-- Danh Mục Sản Phẩm Chủ Lực -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="col-md-6">
                 <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary h-100">
                     <h4 class="fw-bold text-danger mb-3">
@@ -46,6 +62,10 @@ navbar();
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Cam Kết Chất Lượng -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="p-4 p-md-5 rounded-4 border border-secondary bg-black bg-opacity-25 mb-5">
             <h4 class="fw-bold text-center text-white mb-4">
                 <i class="fa-solid fa-shield-halved text-danger me-2"></i>Cam Kết Chất Lượng & Dịch Vụ
@@ -74,6 +94,10 @@ navbar();
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Kết bài -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="text-center pt-2">
             <p class="text-secondary fs-6 mb-4">
                 <strong>Hikaru Shop</strong> không chỉ là một cửa hàng bán sách, mà còn là nơi kết nối cộng đồng những người yêu thích truyện tranh. Cảm ơn bạn đã đồng hành và lựa chọn Hikaru Shop trên hành trình khám phá những thế giới kỳ diệu qua từng trang sách!

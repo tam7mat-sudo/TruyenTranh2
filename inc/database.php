@@ -2,6 +2,10 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+<<<<<<< HEAD
+=======
+// Bật bộ đệm đầu ra để tránh tuyệt đối lỗi header already sent
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 ob_start();
 
 class Database {
@@ -16,12 +20,17 @@ class Database {
     }
 }
 
+<<<<<<< HEAD
 function addProductToCart($id_product){
     if (!isset($_SESSION['user'])) {
         header('location: login.php');
         exit();
     }
 
+=======
+// Hàm thêm giỏ hàng dùng ID làm Key để bắt buộc gộp chung
+function addProductToCart($id_product){
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     $id_product = intval($id_product);
     $q = Database::query("SELECT * FROM products WHERE id = " . $id_product);
     if($q && $r = $q->fetch_array()){
@@ -61,6 +70,10 @@ function _header($title) {
             color: #333333;
             font-family: "Segoe UI", Roboto, sans-serif;
         }
+<<<<<<< HEAD
+=======
+        /* Style Header Hikaru Shop */
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         .hikaru-header {
             background-color: #ffffff;
             border-bottom: 1px solid #e0e0e0;
@@ -83,6 +96,10 @@ function _header($title) {
             background-color: #3a5a40;
             color: #fff;
         }
+<<<<<<< HEAD
+=======
+        /* Style Navigation Bar xanh lá rêu */
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         .hikaru-nav {
             background-color: #4a7c59 !important;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -98,6 +115,10 @@ function _header($title) {
         .hikaru-nav .nav-link:hover {
             background-color: #3a5a40;
         }
+<<<<<<< HEAD
+=======
+        /* Style Card Sản phẩm */
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         .manga-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -166,6 +187,7 @@ function _footer() {
     </footer>
     </body>
     </html>';
+<<<<<<< HEAD
 
     // Đường dẫn chuẩn cho cấu trúc thư mục inc/inc/ hiện tại
     $ai_file1 = __DIR__ . '/inc/ai_chat.php';
@@ -177,6 +199,8 @@ function _footer() {
         $s .= file_get_contents($ai_file2);
     }
 
+=======
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     echo $s;
 }
 
@@ -195,8 +219,15 @@ function navbar() {
     }
 
     $s = '
+<<<<<<< HEAD
     <div class="hikaru-header">
       <div class="container d-flex justify-content-between align-items-center">
+=======
+    <!-- HEADER TRÊN: Logo, Tìm kiếm, Tài khoản, Giỏ hàng -->
+    <div class="hikaru-header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <a class="navbar-brand d-flex align-items-center" href="index.php">
           <img src="accets/icon/logo1.jpg" width="50" height="50" class="rounded-circle me-2">
           <div>
@@ -205,11 +236,19 @@ function navbar() {
           </div>
         </a>
 
+<<<<<<< HEAD
+=======
+        <!-- Thanh tìm kiếm -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <form class="d-flex hikaru-search-bar flex-grow-1 mx-4" style="max-width: 550px;" action="index.php" method="get">
             <input class="form-control shadow-none" type="search" placeholder="Nhập từ khóa tìm kiếm..." />
             <button class="btn btn-search" type="submit">Tìm ngay</button>
         </form>
 
+<<<<<<< HEAD
+=======
+        <!-- Tài khoản & Giỏ hàng -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="d-flex align-items-center gap-4">';
         
         if (!isset($_SESSION['user'])) {
@@ -239,6 +278,10 @@ function navbar() {
       </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- MENU NGANG XANH LÁ RÊU -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     <nav class="navbar navbar-expand-lg hikaru-nav navbar-dark py-0">
       <div class="container">
         <button class="navbar-toggler border-0 my-2" type="button" data-bs-toggle="collapse" data-bs-target="#hikaruNavbar">
@@ -270,6 +313,10 @@ function navbar() {
       </div>
     </nav>
 
+<<<<<<< HEAD
+=======
+    <!-- AJAX BẮT SỰ KIỆN THÊM GIỎ HÀNG -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     <script>
     document.addEventListener("click", function(e) {
         const targetButton = e.target.closest(".ajax-add-cart");
@@ -280,12 +327,15 @@ function navbar() {
             fetch("add_cart_ajax.php?id=" + productId)
                 .then(response => response.json())
                 .then(data => {
+<<<<<<< HEAD
                     if (data.status === "error" && data.redirect) {
                         alert(data.message);
                         window.location.href = data.redirect;
                         return;
                     }
 
+=======
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     const badge = document.getElementById("cart-badge");
                     if (badge) {
                         badge.textContent = data.totalQuantity;
@@ -336,36 +386,58 @@ function jumbotron() {
 function body() {
     $s = '<div id="manga-list" class="container my-4">';
 
+<<<<<<< HEAD
     $themes = [
         1 => [ 
+=======
+    // Cấu hình Màu sắc & Style đặc trưng cho từng Danh mục (Theme)
+    $themes = [
+        1 => [ // Conan
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             'header_bg' => 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
             'card_border' => '1px solid #2a5298',
             'btn_style' => 'btn-primary',
             'badge' => 'bg-info text-dark',
             'icon' => '<i class="fa-solid fa-magnifying-glass text-warning me-2"></i>'
         ],
+<<<<<<< HEAD
         2 => [ 
+=======
+        2 => [ // Doraemon
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             'header_bg' => 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
             'card_border' => '1px solid #00c6ff',
             'btn_style' => 'btn-info text-white',
             'badge' => 'bg-warning text-dark',
             'icon' => '<i class="fa-solid fa-robot text-warning me-2"></i>'
         ],
+<<<<<<< HEAD
         3 => [ 
+=======
+        3 => [ // Dragon Ball
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             'header_bg' => 'linear-gradient(135deg, #f857a6 0%, #ff5858 100%)',
             'card_border' => '1px solid #ff5858',
             'btn_style' => 'btn-warning text-dark fw-bold',
             'badge' => 'bg-danger text-white',
             'icon' => '<i class="fa-solid fa-dragon text-warning me-2"></i>'
         ],
+<<<<<<< HEAD
         4 => [ 
+=======
+        4 => [ // Naruto
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             'header_bg' => 'linear-gradient(135deg, #ff9900 0%, #ff5500 100%)',
             'card_border' => '1px solid #ff9900',
             'btn_style' => 'btn-warning text-dark',
             'badge' => 'bg-dark text-warning border border-warning',
             'icon' => '<i class="fa-solid fa-bolt text-warning me-2"></i>'
         ],
+<<<<<<< HEAD
         5 => [ 
+=======
+        5 => [ // Truyện Trinh Thám
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             'header_bg' => 'linear-gradient(135deg, #800000 0%, #b22222 100%)',
             'card_border' => '2px solid #b22222',
             'btn_style' => 'btn-danger',
@@ -374,13 +446,23 @@ function body() {
         ]
     ];
 
+<<<<<<< HEAD
     if(!isset($_GET['id_category'])) {
+=======
+    // TH1: Ở TRANG CHỦ (Hiển thị tất cả danh mục, mỗi danh mục 4 tấm)
+    if(!isset($_GET['id_category'])) {
+        // Lấy danh sách danh mục (Truyện Trinh Thám id=5 lên đầu)
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         $q = Database::query("SELECT * FROM categories ORDER BY (id = 5) DESC, id ASC");
         
         while ($r = $q->fetch_array()) {
             $catId = $r['id'];
             $catName = htmlspecialchars($r['name']);
             
+<<<<<<< HEAD
+=======
+            // Thiết lập theme
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             $theme = isset($themes[$catId]) ? $themes[$catId] : [
                 'header_bg' => '#212529',
                 'card_border' => '1px solid #444',
@@ -422,6 +504,10 @@ function body() {
             </div>';
         }
     } 
+<<<<<<< HEAD
+=======
+    // TH2: KHI NGƯỜI DÙNG BẤM VÀO XEM CHI TIẾT DANH MỤC
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     else {
         $catId = intval($_GET['id_category']);
         $catQ = Database::query("SELECT * FROM categories WHERE id = $catId");
@@ -435,6 +521,10 @@ function body() {
             'icon' => '<i class="fa-solid fa-bookmark me-2"></i>'
         ];
 
+<<<<<<< HEAD
+=======
+        // Banner đầu danh mục theo màu sắc riêng
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         $s .= '
         <div class="p-4 mb-4 rounded-4 shadow-lg text-white text-center position-relative overflow-hidden" 
              style="background: '.$theme['header_bg'].';">

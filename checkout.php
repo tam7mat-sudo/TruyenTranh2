@@ -1,6 +1,10 @@
 <?php
 include 'inc/database.php';
 
+<<<<<<< HEAD
+=======
+// Xử lý khi người dùng bấm nút Xác Nhận Đặt Hàng
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 $orderSuccess = false;
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
     unset($_SESSION['cart']);
@@ -10,6 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['cart']) && count($_
 _header('Thanh Toán Đơn Hàng - Otaku Realm');
 navbar();
 
+<<<<<<< HEAD
+=======
+// Lấy thông tin user nếu đã đăng nhập để điền sẵn
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 $userName = isset($_SESSION['user']) ? $_SESSION['user']['name'] : '';
 $userPhone = isset($_SESSION['user']) ? $_SESSION['user']['phone'] : '';
 $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
@@ -17,11 +25,19 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
 
 <section class="container my-5">
     <div class="text-center mb-4">
+<<<<<<< HEAD
+=======
+        <!-- ĐÃ THAY ĐỔI MÀU CHỮ THÀNH MÀU VÀNG (text-warning) -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <h2 class="fw-bold text-warning"><i class="fa-solid fa-credit-card me-2"></i>Thanh Toán Đơn Hàng</h2>
         <p class="text-secondary small">Vui lòng kiểm tra lại thông tin và xác nhận đặt hàng</p>
     </div>
 
     <?php if ($orderSuccess): ?>
+<<<<<<< HEAD
+=======
+        <!-- HIỆN THÔNG BÁO KHI ĐẶT HÀNG THÀNH CÔNG -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <div class="card manga-card border-secondary p-5 text-center bg-dark text-white shadow-lg rounded-4">
@@ -39,9 +55,18 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
             </div>
         </div>
     <?php else: ?>
+<<<<<<< HEAD
         <form action="" method="POST">
             <div class="row g-4">
                 <div class="col-lg-7">
+=======
+        <!-- FORM NHẬP THÔNG TIN THANH TOÁN -->
+        <form action="" method="POST">
+            <div class="row g-4">
+                <!-- Cột trái: Thông tin nhận hàng & phương thức thanh toán -->
+                <div class="col-lg-7">
+                    <!-- Thông tin giao hàng -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <div class="card manga-card p-4 mb-4 bg-dark border-secondary">
                         <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-user-pen text-danger me-2"></i>Thông Tin Giao Hàng</h5>
                         <hr class="border-secondary">
@@ -73,10 +98,18 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
                         </div>
                     </div>
 
+<<<<<<< HEAD
+=======
+                    <!-- Phương thức thanh toán -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <div class="card manga-card p-4 bg-dark border-secondary">
                         <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-wallet text-danger me-2"></i>Phương Thức Thanh Toán</h5>
                         <hr class="border-secondary">
                         
+<<<<<<< HEAD
+=======
+                        <!-- COD -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                         <div class="form-check p-3 rounded border border-secondary bg-black mb-3">
                             <input class="form-check-input mt-1 ms-1" type="radio" name="payment_method" id="cod" value="cod" checked>
                             <label class="form-check-label text-white fw-semibold ms-2" for="cod">
@@ -85,6 +118,10 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
                             <p class="text-secondary small ms-4 mb-0 mt-1">Thanh toán tiền mặt trực tiếp cho shipper khi nhận hàng.</p>
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <!-- Chuyển khoản ngân hàng -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                         <div class="form-check p-3 rounded border border-secondary bg-black">
                             <input class="form-check-input mt-1 ms-1" type="radio" name="payment_method" id="bank" value="bank">
                             <label class="form-check-label text-white fw-semibold ms-2" for="bank">
@@ -107,6 +144,10 @@ $userEmail = isset($_SESSION['user']) ? $_SESSION['user']['email'] : '';
                     </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+                <!-- Cột phải: Tóm tắt đơn hàng -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                 <div class="col-lg-5">
                     <div class="card manga-card p-4 bg-dark border-secondary sticky-top" style="top: 90px;">
                         <h5 class="fw-bold text-white mb-3"><i class="fa-solid fa-receipt text-danger me-2"></i>Đơn Hàng Của Bạn</h5>

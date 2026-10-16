@@ -1,15 +1,27 @@
 <?php
 include 'inc/database.php';
 
+<<<<<<< HEAD
+=======
+// Kiểm tra bảo mật phân quyền Super Admin
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 if (!isset($_SESSION['user']) || ($_SESSION['user']['role'] ?? '') !== 'admin') {
     header('location: login.php');
     exit();
 }
 
+<<<<<<< HEAD
+=======
+// Xử lý cập nhật trạng thái đơn hàng (nếu có yêu cầu từ admin)
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
     $order_id = intval($_POST['order_id']);
     $new_status = $_POST['status'];
     
+<<<<<<< HEAD
+=======
+    // Cập nhật trạng thái đơn hàng trong database
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     $stmt = $pdo->prepare("UPDATE orders SET status = ? WHERE id = ?");
     $stmt->execute([$new_status, $order_id]);
     header('location: admin_orders.php?success=1');
@@ -19,6 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
 _header("Quản Trị Cấp Cao - OTAKU REALM");
 navbar();
 
+<<<<<<< HEAD
+=======
+// Lấy danh sách đơn hàng từ CSDL
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 try {
     $stmt = $pdo->query("SELECT * FROM orders ORDER BY id DESC");
     $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -28,6 +44,10 @@ try {
 ?>
 
 <div class="container my-5">
+<<<<<<< HEAD
+=======
+    <!-- Header khu vực tối cao của Admin -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     <div class="card manga-card p-4 mb-4 border-danger bg-dark">
         <div class="row align-items-center">
             <div class="col-md-8">
@@ -56,6 +76,10 @@ try {
         </div>
     <?php endif; ?>
 
+<<<<<<< HEAD
+=======
+    <!-- Khu vực danh sách đơn hàng -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
     <div class="card manga-card p-4 bg-dark text-white border-secondary">
         <h4 class="fw-bold mb-4 d-flex align-items-center text-white">
             <span class="bg-danger rounded-3 p-2 me-2 d-inline-flex"><i class="fa-solid fa-clipboard-list fs-5 text-white"></i></span>
@@ -111,6 +135,10 @@ try {
                                     <?php endif; ?>
                                 </td>
                                 <td>
+<<<<<<< HEAD
+=======
+                                    <!-- Form tự động đổi trạng thái ngay khi chọn -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                                     <form action="admin_orders.php" method="post" class="d-inline">
                                         <input type="hidden" name="order_id" value="<?= $o['id'] ?>">
                                         <input type="hidden" name="update_status" value="1">

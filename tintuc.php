@@ -7,19 +7,33 @@ $limit = 5;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
+<<<<<<< HEAD
+=======
+// Lấy tổng số bài viết
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 $totalResult = Database::query("SELECT COUNT(*) as total FROM news");
 $totalRow = $totalResult->fetch_assoc();
 $totalNews = $totalRow['total'];
 $totalPages = ceil($totalNews / $limit);
 
+<<<<<<< HEAD
+=======
+// Lấy danh sách bài viết theo trang
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 $result = Database::query("SELECT * FROM news ORDER BY id DESC LIMIT $start, $limit");
 ?>
 
 <section class="container my-5">
     <div class="row g-4">
+<<<<<<< HEAD
         <div class="col-lg-8">
             <h2 class="fw-bold mb-4" style="color: #4a7c59;">
     <i class="fa-solid fa-newspaper text-danger me-2"></i>TIN TỨC & SỰ KIỆN</h2>
+=======
+        <!-- Cột trái: Danh sách tin tức -->
+        <div class="col-lg-8">
+            <h3 class="fw-bold mb-4 text-white"><i class="fa-solid fa-newspaper text-danger me-2"></i>TIN TỨC & SỰ KIỆN</h3>
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             
             <?php if ($result && $result->num_rows > 0): ?>
                 <?php while ($row = $result->fetch_assoc()): ?>
@@ -34,6 +48,10 @@ $result = Database::query("SELECT * FROM news ORDER BY id DESC LIMIT $start, $li
                     </div>
                 <?php endwhile; ?>
 
+<<<<<<< HEAD
+=======
+                <!-- Phân trang -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                 <?php if ($totalPages > 1): ?>
                     <nav aria-label="Page navigation">
                         <ul class="pagination justify-content-center">
@@ -51,6 +69,10 @@ $result = Database::query("SELECT * FROM news ORDER BY id DESC LIMIT $start, $li
             <?php endif; ?>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Cột phải: Bài viết mới -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="col-lg-4">
             <div class="card manga-card p-4 bg-dark border-secondary">
                 <h5 class="fw-bold text-white mb-3">Bài Viết Mới</h5>

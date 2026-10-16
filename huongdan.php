@@ -13,6 +13,10 @@ navbar();
 
         <div class="accordion accordion-flush" id="faqAccordion">
 
+<<<<<<< HEAD
+=======
+            <!-- Câu 1 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="accordion-item bg-dark text-white border-secondary">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed bg-dark text-white shadow-none fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
@@ -26,7 +30,11 @@ navbar();
                 </div>
             </div>
 
+<<<<<<< HEAD
        
+=======
+            <!-- Câu 2 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="accordion-item bg-dark text-white border-secondary">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed bg-dark text-white shadow-none fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
@@ -40,6 +48,10 @@ navbar();
                 </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            <!-- Câu 3 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="accordion-item bg-dark text-white border-secondary">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed bg-dark text-white shadow-none fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
@@ -57,6 +69,10 @@ navbar();
                 </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            <!-- Câu 4 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="accordion-item bg-dark text-white border-secondary">
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed bg-dark text-white shadow-none fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
@@ -126,6 +142,10 @@ navbar();
                 </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            <!-- Câu 9 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="accordion-item bg-dark text-white border-secondary">
                 <h2 class="accordion-header" id="headingNine">
                     <button class="accordion-button collapsed bg-dark text-white shadow-none fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
@@ -139,6 +159,10 @@ navbar();
                 </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            <!-- Câu 10 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="accordion-item bg-dark text-white border-secondary">
                 <h2 class="accordion-header" id="headingTen">
                     <button class="accordion-button collapsed bg-dark text-white shadow-none fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">

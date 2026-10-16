@@ -7,6 +7,10 @@ navbar();
 <section class="container my-5">
     <div class="card manga-card border-secondary p-4 p-md-5 bg-dark text-white shadow-lg rounded-4">
         
+<<<<<<< HEAD
+=======
+        <!-- Header Lịch phát hành -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3 border-bottom border-secondary gap-3">
             <div>
                 <h3 class="fw-bold mb-1 text-white">
@@ -15,6 +19,10 @@ navbar();
                 <p class="text-secondary small mb-0">Cập nhật lịch ra mắt các tập truyện mới nhất tháng 10/2026</p>
             </div>
             
+<<<<<<< HEAD
+=======
+            <!-- Tìm kiếm nhanh trên lịch -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
             <div class="style-search" style="max-width: 300px;">
                 <div class="input-group">
                     <span class="input-group-text bg-black text-secondary border-secondary"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -23,6 +31,10 @@ navbar();
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- Bảng danh sách lịch phát hành -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
         <div class="table-responsive">
             <table class="table table-dark table-hover align-middle text-center border-secondary mb-0" id="scheduleTable">
                 <thead class="table-secondary text-dark text-uppercase fs-7">
@@ -37,6 +49,10 @@ navbar();
                     </tr>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
+=======
+                    <!-- Item 1: Ngôn Tình mới ra mắt -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">05/10/2026</span>
@@ -53,11 +69,19 @@ navbar();
                         <td class="text-danger fw-bold fs-6">35,000 đ</td>
                         <td><span class="badge bg-success bg-opacity-20 text-success border border-success px-2 py-1">Đã Phát Hành</span></td>
                         <td>
+<<<<<<< HEAD
                             <!-- Đã gắn data-id tương ứng trong CSDL và class ajax-add-cart để nút hoạt động -->
                             <button class="btn btn-sm btn-outline-danger rounded-pill px-3 ajax-add-cart" data-id="1"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</button>
                         </td>
                     </tr>
 
+=======
+                            <a href="index.php?id_category=5" class="btn btn-sm btn-outline-danger rounded-pill px-3"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 2 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">10/10/2026</span>
@@ -74,10 +98,18 @@ navbar();
                         <td class="text-danger fw-bold fs-6">25,000 đ</td>
                         <td><span class="badge bg-success bg-opacity-20 text-success border border-success px-2 py-1">Đã Phát Hành</span></td>
                         <td>
+<<<<<<< HEAD
                             <button class="btn btn-sm btn-outline-danger rounded-pill px-3 ajax-add-cart" data-id="2"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</button>
                         </td>
                     </tr>
 
+=======
+                            <a href="index.php" class="btn btn-sm btn-outline-danger rounded-pill px-3"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 3: Ngôn Tình tập tiếp theo -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">12/10/2026</span>
@@ -94,10 +126,18 @@ navbar();
                         <td class="text-danger fw-bold fs-6">35,000 đ</td>
                         <td><span class="badge bg-success bg-opacity-20 text-success border border-success px-2 py-1">Đã Phát Hành</span></td>
                         <td>
+<<<<<<< HEAD
                             <button class="btn btn-sm btn-outline-danger rounded-pill px-3 ajax-add-cart" data-id="3"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</button>
                         </td>
                     </tr>
 
+=======
+                            <a href="index.php?id_category=5" class="btn btn-sm btn-outline-danger rounded-pill px-3"><i class="fa-solid fa-cart-shopping me-1"></i>Mua ngay</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 4 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">15/10/2026</span>
@@ -114,10 +154,18 @@ navbar();
                         <td class="text-danger fw-bold fs-6">45,000 đ</td>
                         <td><span class="badge bg-warning bg-opacity-20 text-warning border border-warning px-2 py-1">Sắp Ra Mắt</span></td>
                         <td>
+<<<<<<< HEAD
                             <button class="btn btn-sm btn-danger rounded-pill px-3 ajax-add-cart" data-id="4"><i class="fa-solid fa-bell me-1"></i>Đặt trước</button>
                         </td>
                     </tr>
 
+=======
+                            <button class="btn btn-sm btn-danger rounded-pill px-3"><i class="fa-solid fa-bell me-1"></i>Đặt trước</button>
+                        </td>
+                    </tr>
+
+                    <!-- Item 5: Ngôn Tình Pre-Order -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">18/10/2026</span>
@@ -134,10 +182,18 @@ navbar();
                         <td class="text-danger fw-bold fs-6">40,000 đ</td>
                         <td><span class="badge bg-info bg-opacity-20 text-info border border-info px-2 py-1">Nhận Pre-order</span></td>
                         <td>
+<<<<<<< HEAD
                             <button class="btn btn-sm btn-danger rounded-pill px-3 ajax-add-cart" data-id="5"><i class="fa-solid fa-fire me-1"></i>Pre-order</button>
                         </td>
                     </tr>
 
+=======
+                            <button class="btn btn-sm btn-danger rounded-pill px-3"><i class="fa-solid fa-fire me-1"></i>Pre-order</button>
+                        </td>
+                    </tr>
+
+                    <!-- Item 6 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">20/10/2026</span>
@@ -154,10 +210,18 @@ navbar();
                         <td class="text-danger fw-bold fs-6">25,000 đ</td>
                         <td><span class="badge bg-warning bg-opacity-20 text-warning border border-warning px-2 py-1">Sắp Ra Mắt</span></td>
                         <td>
+<<<<<<< HEAD
                             <button class="btn btn-sm btn-danger rounded-pill px-3 ajax-add-cart" data-id="6"><i class="fa-solid fa-bell me-1"></i>Đặt trước</button>
                         </td>
                     </tr>
 
+=======
+                            <button class="btn btn-sm btn-danger rounded-pill px-3"><i class="fa-solid fa-bell me-1"></i>Đặt trước</button>
+                        </td>
+                    </tr>
+
+                    <!-- Item 7 -->
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                     <tr>
                         <td class="text-secondary fw-semibold">
                             <span class="d-block text-white">25/10/2026</span>
@@ -174,7 +238,11 @@ navbar();
                         <td class="text-danger fw-bold fs-6">35,000 đ</td>
                         <td><span class="badge bg-info bg-opacity-20 text-info border border-info px-2 py-1">Nhận Pre-order</span></td>
                         <td>
+<<<<<<< HEAD
                             <button class="btn btn-sm btn-danger rounded-pill px-3 ajax-add-cart" data-id="7"><i class="fa-solid fa-fire me-1"></i>Pre-order</button>
+=======
+                            <button class="btn btn-sm btn-danger rounded-pill px-3"><i class="fa-solid fa-fire me-1"></i>Pre-order</button>
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
                         </td>
                     </tr>
                 </tbody>
@@ -183,9 +251,14 @@ navbar();
     </div>
 </section>
 
+<<<<<<< HEAD
 <!-- SCRIPT TÌM KIẾM VÀ AJAX ĐẶT HÀNG / MUA NGAY GIỮ NGUYÊN GIAO DIỆN -->
 <script>
 // Chức năng lọc tìm kiếm lịch phát hành
+=======
+<!-- Script lọc danh sách truyện nhanh -->
+<script>
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 document.getElementById('searchSchedule').addEventListener('keyup', function() {
     let filter = this.value.toLowerCase();
     let rows = document.querySelectorAll('#scheduleTable tbody tr');
@@ -199,6 +272,7 @@ document.getElementById('searchSchedule').addEventListener('keyup', function() {
         }
     });
 });
+<<<<<<< HEAD
 
 // Chức năng click mua ngay / đặt trước tự động thêm vào giỏ hàng
 document.addEventListener("click", function(e) {
@@ -240,6 +314,8 @@ document.addEventListener("click", function(e) {
             .catch(error => console.error("Lỗi AJAX:", error));
     }
 });
+=======
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 </script>
 
 <?php

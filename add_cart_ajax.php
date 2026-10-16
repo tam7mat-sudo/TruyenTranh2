@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 include_once 'inc/database.php';
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -36,6 +37,15 @@ if ($id_product > 0) {
             );
         }
     }
+=======
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include 'inc/database.php';
+
+if (isset($_GET['id'])) {
+    addProductToCart($_GET['id']);
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 }
 
 $totalQuantity = 0;
@@ -45,9 +55,14 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
     }
 }
 
+<<<<<<< HEAD
 echo json_encode([
     'status' => 'success',
     'totalQuantity' => $totalQuantity
 ]);
+=======
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode(['totalQuantity' => $totalQuantity]);
+>>>>>>> a67c651da682f9124b7f7c444f7fecbe8c6caf89
 exit();
 ?>
